@@ -1,0 +1,1 @@
+Simple ToDo static website made with React JS and TypeScript in addition to Linting with (ESLinting) and Prettier with jest testing
