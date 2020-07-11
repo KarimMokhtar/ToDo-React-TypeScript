@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ToDoForm from './components/ToDoForm';
-import ToDoList from './components/ToDoList';
+import ToDoForm from './components/todoFrom/ToDoForm';
+import ToDoList from './components/todoList/ToDoList';
 
 import { TodoInterface } from './interface';
 

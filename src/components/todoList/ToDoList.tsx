@@ -1,8 +1,10 @@
 import React from 'react';
-import ToDoItem from './ToDoItem';
-import { TodoListInterface } from '../interface';
+import ToDoItem from '../todoItem/ToDoItem';
+import { TodoListInterface } from '../../interface';
 
-const ToDoList = (props: TodoListInterface): React.ReactElement => {
+const ToDoList = React.memo(function MyComponent(
+  props: TodoListInterface
+): React.ReactElement {
   return (
     <div className="todo-list">
       <ul>
@@ -19,6 +21,6 @@ const ToDoList = (props: TodoListInterface): React.ReactElement => {
       </ul>
     </div>
   );
-};
+});
 
 export default ToDoList;

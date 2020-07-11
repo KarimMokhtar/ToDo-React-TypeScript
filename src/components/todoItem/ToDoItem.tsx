@@ -1,7 +1,9 @@
 import React from 'react';
-import { TodoItemInterface } from '../interface';
+import { TodoItemInterface } from '../../interface';
 
-const ToDoItem = (props: TodoItemInterface): React.ReactElement => {
+const ToDoItem = React.memo(function MyComponent(
+  props: TodoItemInterface
+): React.ReactElement {
   return (
     <div className="todo-item">
       <div onClick={() => props.handleTodoComplete(props.todo.id)}>
@@ -27,6 +29,6 @@ const ToDoItem = (props: TodoItemInterface): React.ReactElement => {
       </div>
     </div>
   );
-};
+});
 
 export default ToDoItem;

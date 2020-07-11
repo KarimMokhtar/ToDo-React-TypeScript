@@ -1,8 +1,10 @@
 import React from 'react';
 import shortid from 'shortid';
-import { TodoInterface, TodoFormInterface } from '../interface';
+import { TodoInterface, TodoFormInterface } from '../../interface';
 
-const ToDoForm = (props: TodoFormInterface): React.ReactElement => {
+const ToDoForm = React.memo(function MyComponent(
+  props: TodoFormInterface
+): React.ReactElement {
   const inputRef = React.useRef<HTMLInputElement>(null);
   const [values, setValues] = React.useState('');
 
@@ -34,6 +36,6 @@ const ToDoForm = (props: TodoFormInterface): React.ReactElement => {
       />
     </div>
   );
-};
+});
 
 export default ToDoForm;
